@@ -380,14 +380,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    7 分
                 </div>
                 
 
@@ -402,6 +402,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -409,70 +412,165 @@
             <div id="articleContent">
                 <h1 id="标签的语法"><a href="#标签的语法" class="headerlink" title="标签的语法"></a>标签的语法</h1><ul>
 <li><p>标签由英文&lt;&gt;括起来，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>html<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>标签一般成双出现，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;<span class="regexp">/p&gt;  &lt;h1&gt;&lt;/</span>h1&gt; <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>  <span class="token operator">&lt;</span>h1<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span> <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> <span class="token operator">&lt;</span>span<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>标签不区分大小写，但大部分程序员用小写。</p>
 </li>
 </ul>
-<h1 id="HTMl文档结构"><a href="#HTMl文档结构" class="headerlink" title="HTMl文档结构"></a>HTMl文档结构</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> &lt;html&gt;&lt;<span class="regexp">/html&gt;标签对：&lt;html&gt;位于文档的最前面，用来标识文档的开始；&lt;/</span>html&gt;用于文档的最后面，用来标识文档的结束。中间部分是文档的头部（head）和主体（body）。</span><br><span class="line"></span><br><span class="line">&lt;head&gt;&lt;/head&gt;标签对：包含一些文档的信息，可以包含文档的辅助性标签，</span><br><span class="line">例如：&lt;title&gt;&lt;/title&gt;:标题</span><br><span class="line"></span><br><span class="line">     &lt;style&gt;&lt;/style&gt;:用来修改文件的样式</span><br><span class="line"></span><br><span class="line">     &lt;script&gt;&lt;/script&gt; </span><br><span class="line"></span><br><span class="line">     <span class="xml"><span class="tag">&lt;<span class="name">link</span>/&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">meta</span>/&gt;</span></span></span><br><span class="line">  </span><br><span class="line">     &lt;meta charset=&quot;UTF-8&quot;&gt;:设置当前文件字符编码</span><br><span class="line"></span><br><span class="line"> 但是浏览器只会显示&lt;title&gt;的内容。</span><br><span class="line"></span><br><span class="line">&lt;body&gt;&lt;/body&gt;:中间放html的主要内容。</span><br><span class="line"></span><br><span class="line">注释文字：&lt;!--注释文字--&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="HTMl文档结构"><a href="#HTMl文档结构" class="headerlink" title="HTMl文档结构"></a>HTMl文档结构</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token operator">&lt;</span>html<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>标签对：<span class="token operator">&lt;</span>html<span class="token operator">></span>位于文档的最前面，用来标识文档的开始；<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>用于文档的最后面，用来标识文档的结束。中间部分是文档的头部（head）和主体（body）。
+
+<span class="token operator">&lt;</span>head<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>标签对：包含一些文档的信息，可以包含文档的辅助性标签，
+例如：<span class="token operator">&lt;</span>title<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span><span class="token operator">:</span>标题
+
+     <span class="token operator">&lt;</span>style<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span><span class="token operator">:</span>用来修改文件的样式
+
+     <span class="token operator">&lt;</span>script<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span> 
+
+     <span class="token operator">&lt;</span>link<span class="token operator">/</span><span class="token operator">></span> <span class="token operator">&lt;</span>meta<span class="token operator">/</span><span class="token operator">></span>
+  
+     <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span><span class="token operator">:</span>设置当前文件字符编码
+
+ 但是浏览器只会显示<span class="token operator">&lt;</span>title<span class="token operator">></span>的内容。
+
+<span class="token operator">&lt;</span>body<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span><span class="token operator">:</span>中间放html的主要内容。
+
+注释文字：<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>注释文字<span class="token operator">--</span><span class="token operator">></span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h1 id="各种标签"><a href="#各种标签" class="headerlink" title="各种标签"></a>各种标签</h1><p><em><strong>语义化标签</strong></em></p>
 <ul>
 <li><p>段落标签：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt; 段落文本&lt;/p&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>p<span class="token operator">></span> 段落文本<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>自定义样式标签:<span>文字</span></p>
 <p>需要在head标签中使用style标签：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>了不起的盖茨比<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span></span><br><span class="line"><span class="css"><span class="xml">    <span class="selector-tag">span</span> &#123;</span></span></span><br><span class="line"><span class="css"><span class="xml">        <span class="attribute">color</span>:blue;//将字体设置为蓝色</span></span></span><br><span class="line"><span class="css"><span class="xml">    &#125;</span></span></span><br><span class="line"><span class="css"><span class="xml">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>head<span class="token operator">></span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>title<span class="token operator">></span>了不起的盖茨比<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
+    <span class="token operator">&lt;</span>style<span class="token operator">></span>
+    span <span class="token punctuation">&#123;</span>
+        color<span class="token operator">:</span>blue<span class="token punctuation">;</span><span class="token comment">//将字体设置为蓝色</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>标题标签：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;&lt;<span class="regexp">/h1&gt; &lt;h2&gt;&lt;/</span>h2&gt;....共有<span class="number">6</span>级，字号逐级递减</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>h1<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span> <span class="token operator">&lt;</span>h2<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span><span class="token operator">...</span><span class="token punctuation">.</span>共有<span class="token number">6</span>级，字号逐级递减<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>为网页划分独立板块：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;内容&lt;/div&gt; 相当于一个容器，将内容放在里面，将各个部分划分开。</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div<span class="token operator">></span>内容<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span> 相当于一个容器，将内容放在里面，将各个部分划分开。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>头部标签：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;我是头部标签&lt;/header&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>header<span class="token operator">></span>我是头部标签<span class="token operator">&lt;</span><span class="token operator">/</span>header<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>底部标签：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer&gt; 我是底部标签&lt;/footer&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>footer<span class="token operator">></span> 我是底部标签<span class="token operator">&lt;</span><span class="token operator">/</span>footer<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>正文标签：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;section&gt;我是一个区域&lt;/section&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">&lt;section&gt;我是一个区域&lt;&#x2F;section&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>侧边栏标签：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;aside&gt;我是侧边栏&lt;/aside&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>aside<span class="token operator">></span>我是侧边栏<span class="token operator">&lt;</span><span class="token operator">/</span>aside<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><em><strong>效果标签</strong></em></p>
 <hr>
 </li>
 <li><p>换行标签：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;br /&gt;直接在换行的部分输入</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>br <span class="token operator">/</span><span class="token operator">></span>直接在换行的部分输入<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>空格标签：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;nbsp</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&amp;</span>nbsp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>水平分割线：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;hr /&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>hr <span class="token operator">/</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><em><strong>列表标签</strong></em></p>
 <hr>
 </li>
 <li><p>无序列表：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#&lt;ul&gt;&lt;li&gt;内容&lt;li&gt;&lt;ul&gt;</span><br><span class="line">    </span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt; 我的第一个列表信息&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;我的第二个列表信息&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">#<span class="token operator">&lt;</span>ul<span class="token operator">></span><span class="token operator">&lt;</span>li<span class="token operator">></span>内容<span class="token operator">&lt;</span>li<span class="token operator">></span><span class="token operator">&lt;</span>ul<span class="token operator">></span>
+    
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+    <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+        <span class="token operator">&lt;</span>li<span class="token operator">></span> 我的第一个列表信息<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+        <span class="token operator">&lt;</span>li<span class="token operator">></span>我的第二个列表信息<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>有序列表：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#&lt;ol&gt;&lt;li&gt;内容&lt;li&gt;&lt;ol&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt;我的第一个列表信息&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;我的第二个列表信息&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">#<span class="token operator">&lt;</span>ol<span class="token operator">></span><span class="token operator">&lt;</span>li<span class="token operator">></span>内容<span class="token operator">&lt;</span>li<span class="token operator">></span><span class="token operator">&lt;</span>ol<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span>ol<span class="token operator">></span>
+    <span class="token operator">&lt;</span>li<span class="token operator">></span>我的第一个列表信息<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+    <span class="token operator">&lt;</span>li<span class="token operator">></span>我的第二个列表信息<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ol<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>为网页添加图片</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">&quot;E:/HTML/笔记/图片的地址&quot;</span> alt=<span class="string">&quot;图片下载失败时的替换文本&quot;</span> title=<span class="string">&quot;提示文本&quot;</span> /&gt;</span><br><span class="line"></span><br><span class="line">src:图像的位置   alt:替换文本  title:当鼠标划过该图片时显示的文字  图像可以是GIF、PNG、IPEG格式</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"E:/HTML/笔记/图片的地址"</span> alt<span class="token operator">=</span><span class="token string">"图片下载失败时的替换文本"</span> title<span class="token operator">=</span><span class="token string">"提示文本"</span> <span class="token operator">/</span><span class="token operator">></span>
+
+src<span class="token operator">:</span>图像的位置   alt<span class="token operator">:</span>替换文本  title<span class="token operator">:</span>当鼠标划过该图片时显示的文字  图像可以是<span class="token constant">GIF</span>、<span class="token constant">PNG</span>、<span class="token constant">IPEG</span>格式<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 <li><p>网页链接</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;网址&quot;</span>  title=<span class="string">&quot;提示文本&quot;</span>&gt;链接显示的文本&lt;/a&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"网址"</span>  title<span class="token operator">=</span><span class="token string">"提示文本"</span><span class="token operator">></span>链接显示的文本<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>在浏览器窗口打开链接</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;http://www.baidu.com&quot;</span> target=<span class="string">&quot;_self&quot;</span>&gt;百度&lt;/a&gt;:target=<span class="string">&quot;_self&quot;</span>在当前页面打开链接</span><br><span class="line"></span><br><span class="line">target=”_blank<span class="string">&quot;:新建窗口打开链接</span></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"http://www.baidu.com"</span> target<span class="token operator">=</span><span class="token string">"_self"</span><span class="token operator">></span>百度<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span><span class="token operator">:</span>target<span class="token operator">=</span><span class="token string">"_self"</span>在当前页面打开链接
+
+target<span class="token operator">=</span>”_blank"<span class="token operator">:</span>新建窗口打开链接<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 <li><p>表格标签</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;&lt;/table&gt;:用来定义整个表格</span><br><span class="line"></span><br><span class="line">border=<span class="string">&quot;1&quot;</span>:用来加边框</span><br><span class="line"></span><br><span class="line">&lt;caption&gt;&lt;/caption&gt;:表格的标题</span><br><span class="line"></span><br><span class="line">&lt;tr&gt;&lt;/tr&gt;表示一行</span><br><span class="line"></span><br><span class="line">&lt;th&gt;&lt;/th&gt;:一列，有加粗效果</span><br><span class="line"></span><br><span class="line">&lt;td&gt;&lt;/td&gt;:一列，无加粗效果</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>table<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>table<span class="token operator">></span><span class="token operator">:</span>用来定义整个表格
+
+border<span class="token operator">=</span><span class="token string">"1"</span><span class="token operator">:</span>用来加边框
+
+<span class="token operator">&lt;</span>caption<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>caption<span class="token operator">></span><span class="token operator">:</span>表格的标题
+
+<span class="token operator">&lt;</span>tr<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>表示一行
+
+<span class="token operator">&lt;</span>th<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span><span class="token operator">:</span>一列，有加粗效果
+
+<span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span><span class="token operator">:</span>一列，无加粗效果<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;学习表格标签&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;table border=&quot;1&quot;&gt;</span><br><span class="line">        &lt;caption&gt;前端三剑客&lt;/caption&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;th&gt;知识点&lt;/th&gt;</span><br><span class="line">            &lt;th&gt;重要程度&lt;/th&gt;</span><br><span class="line">            &lt;th&gt;难度&lt;/th&gt;</span><br><span class="line">            &lt;th&gt;学习周期&lt;/th&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;html&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;5星&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;3星&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;7天&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;css&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;5星&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;4星&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;10天&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;js&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;5星&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;5星&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;20天&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">    &lt;/table&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>html<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>title<span class="token operator">></span>学习表格标签<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+    <span class="token operator">&lt;</span>table border<span class="token operator">=</span><span class="token string">"1"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>caption<span class="token operator">></span>前端三剑客<span class="token operator">&lt;</span><span class="token operator">/</span>caption<span class="token operator">></span>
+        <span class="token operator">&lt;</span>tr<span class="token operator">></span>
+            <span class="token operator">&lt;</span>th<span class="token operator">></span>知识点<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
+            <span class="token operator">&lt;</span>th<span class="token operator">></span>重要程度<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
+            <span class="token operator">&lt;</span>th<span class="token operator">></span>难度<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
+            <span class="token operator">&lt;</span>th<span class="token operator">></span>学习周期<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>
+        <span class="token operator">&lt;</span>tr<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span>html<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token number">5</span>星<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token number">3</span>星<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token number">7</span>天<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>
+        <span class="token operator">&lt;</span>tr<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span>css<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token number">5</span>星<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token number">4</span>星<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token number">10</span>天<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>
+        <span class="token operator">&lt;</span>tr<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span>js<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token number">5</span>星<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token number">5</span>星<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+            <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token number">20</span>天<span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>table<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="C:\Users\OMEN\AppData\Roaming\Typora\typora-user-images\image-20210420201516775.png" alt="image-20210420201516775"></p>
 <p>使用thead、tbody、tfooyt定义表格</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>&lt;thead&gt;标签表示表格头部,一般放&lt;tr&gt;和&lt;th&gt;标签。</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>&lt;tbody&gt;标签表示表格内容,一般放&lt;tr&gt;和&lt;td&gt;标签。</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>、&lt;tfoot&gt;标签标签表格脚部标注,一般放&lt;tr&gt;和&lt;td&gt;标签。</span><br><span class="line"></span><br><span class="line"><span class="number">4</span>、对表格中的行进行分组，这种划分使浏览器有能力支持独立于表格标题和页脚的正文滚动，当长的表格被打印时，表格的表头和页脚也就可被打印在包含表格数据的每张页面上。</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token number">1.</span><span class="token operator">&lt;</span>thead<span class="token operator">></span>标签表示表格头部<span class="token punctuation">,</span>一般放<span class="token operator">&lt;</span>tr<span class="token operator">></span>和<span class="token operator">&lt;</span>th<span class="token operator">></span>标签。
+
+<span class="token number">2.</span><span class="token operator">&lt;</span>tbody<span class="token operator">></span>标签表示表格内容<span class="token punctuation">,</span>一般放<span class="token operator">&lt;</span>tr<span class="token operator">></span>和<span class="token operator">&lt;</span>td<span class="token operator">></span>标签。
+
+<span class="token number">3</span>、<span class="token operator">&lt;</span>tfoot<span class="token operator">></span>标签标签表格脚部标注<span class="token punctuation">,</span>一般放<span class="token operator">&lt;</span>tr<span class="token operator">></span>和<span class="token operator">&lt;</span>td<span class="token operator">></span>标签。
+
+<span class="token number">4</span>、对表格中的行进行分组，这种划分使浏览器有能力支持独立于表格标题和页脚的正文滚动，当长的表格被打印时，表格的表头和页脚也就可被打印在包含表格数据的每张页面上。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h1 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h1><p>1.表单是可以把浏览器输入的数据传送到服务器端，这样服务器端的程序就可以处理表单传过来的数据。</p>
 <p>2.语法:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=<span class="string">&quot;传送方式&quot;</span>  action=<span class="string">&quot;服务器文件&quot;</span>&gt; &lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>form method<span class="token operator">=</span><span class="token string">"传送方式"</span>  action<span class="token operator">=</span><span class="token string">"服务器文件"</span><span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>3.用户名密码：</p>
 <p>type:</p>
@@ -482,12 +580,26 @@
 </ul>
 <p>name:为文本框命名</p>
 <p>value:为文本框设置默认值，一般起到提示作用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text/password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;名称&quot;</span> <span class="attr">value</span>=<span class="string">&quot;文本&quot;</span> /&gt;</span></span> &lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>form<span class="token operator">></span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text/password"</span> name<span class="token operator">=</span><span class="token string">"名称"</span> value<span class="token operator">=</span><span class="token string">"文本"</span> <span class="token operator">/</span><span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ol start="4">
 <li><p>给点提示：placeholder属性的使用</p>
 <p>placeholder属性为输入框占位符，里面可以放提示的输入信息。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">html&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;input-placeholder&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot; placeholder=&quot;请输入用户名&quot; &gt;</span><br><span class="line">    &lt;br/&gt;</span><br><span class="line">    &lt;input type=&quot;password&quot; placeholder=&quot;请输入密码&quot;&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">html<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>title<span class="token operator">></span>input<span class="token operator">-</span>placeholder<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> placeholder<span class="token operator">=</span><span class="token string">"请输入用户名"</span> <span class="token operator">></span>
+    <span class="token operator">&lt;</span>br<span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"password"</span> placeholder<span class="token operator">=</span><span class="token string">"请输入密码"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="C:\Users\OMEN\AppData\Roaming\Typora\typora-user-images\image-20210426193217809.png" alt="image-20210426193217809"></p>
 </li>
@@ -500,16 +612,29 @@
 <li><p>邮箱输入框：type=”email”</p>
 </li>
 <li><p>创建文本域：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea cols=<span class="string">&quot;行数“ orws=&quot;</span>列数” &gt;在这里输入内容&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>textarea cols<span class="token operator">=</span><span class="token string">"行数“ orws="</span>列数” <span class="token operator">></span>在这里输入内容<span class="token operator">&lt;</span><span class="token operator">/</span>textarea<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">cols</span>=<span class="string">&quot;50&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;10&quot;</span>&gt;</span>在这里输入内容...<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>
+    <span class="token operator">&lt;</span>form<span class="token operator">></span>
+        <span class="token operator">&lt;</span>textarea cols<span class="token operator">=</span><span class="token string">"50"</span> rows<span class="token operator">=</span><span class="token string">"10"</span><span class="token operator">></span>在这里输入内容<span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>textarea<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 </li>
 </ul>
 <p>​        9.label标签，为input标签穿上衣服：</p>
 <p>​          注意：for属性中的值应当与相关控件的id属性值相同</p>
 <p>​          当点击该标签时，自动跳转到下相对应控件的位置</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">javascript</span><br><span class="line">&lt;form&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;uname&quot;</span>&gt;</span>输入你的用户名<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span></span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;uname&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;Enter name&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;pass&quot;</span>&gt;</span>请输入密码<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;pass&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;Enter password&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">javascript
+<span class="token operator">&lt;</span>form<span class="token operator">></span>
+    <span class="token operator">&lt;</span>label <span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"uname"</span><span class="token operator">></span>输入你的用户名<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"uname"</span> placeholder<span class="token operator">=</span><span class="token string">"Enter name"</span><span class="token operator">></span>
+     <span class="token operator">&lt;</span>br<span class="token operator">/</span><span class="token operator">></span>
+     <span class="token operator">&lt;</span>label <span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"pass"</span><span class="token operator">></span>请输入密码<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+      <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"password"</span> name<span class="token operator">=</span><span class="token string">"pass"</span> placeholder<span class="token operator">=</span><span class="token string">"Enter password"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 <p> 10.单选框和复选框</p>
@@ -536,11 +661,18 @@
 <li><p>value：提交到服务器的值</p>
 </li>
 <li><p>当设置成selected=”selected”时，该选项被默认选中</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">   <span class="xml"><span class="tag">&lt;<span class="name">form</span>&gt;</span> </span></span><br><span class="line"><span class="xml">       <span class="tag">&lt;<span class="name">select</span>&gt;</span></span></span><br><span class="line"><span class="xml">         <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;看书&quot;</span>&gt;</span>看书<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span></span><br><span class="line"><span class="xml">         <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;游戏&quot;</span> <span class="attr">selected</span>=<span class="string">&quot;selected&quot;</span>&gt;</span>游戏<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span></span><br><span class="line"><span class="xml">           <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></span><br><span class="line">&lt;/body&gt;    </span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>
+   <span class="token operator">&lt;</span>form<span class="token operator">></span> 
+       <span class="token operator">&lt;</span>select<span class="token operator">></span>
+         <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">"看书"</span><span class="token operator">></span>看书<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">></span>
+         <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">"游戏"</span> selected<span class="token operator">=</span><span class="token string">"selected"</span><span class="token operator">></span>游戏<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">></span>
+           <span class="token operator">&lt;</span><span class="token operator">/</span>select<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <p>12.提交按钮</p>
 <p>​      type=”submit” value=”按钮上显示的字”</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;    <span class="xml"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span> <span class="attr">action</span>=<span class="string">&quot;save.php&quot;</span>&gt;</span>        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;myName&quot;</span>&gt;</span>姓名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span>        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot; &quot;</span> <span class="attr">name</span>=<span class="string">&quot;myName &quot;</span> /&gt;</span>        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;提交&quot;</span> <span class="attr">name</span>=<span class="string">&quot;submitBtn&quot;</span> /&gt;</span>    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span>&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>    <span class="token operator">&lt;</span>form method<span class="token operator">=</span><span class="token string">"post"</span> action<span class="token operator">=</span><span class="token string">"save.php"</span><span class="token operator">></span>        <span class="token operator">&lt;</span>label <span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"myName"</span><span class="token operator">></span>姓名：<span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> value<span class="token operator">=</span><span class="token string">" "</span> name<span class="token operator">=</span><span class="token string">"myName "</span> <span class="token operator">/</span><span class="token operator">></span>        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"submit"</span> value<span class="token operator">=</span><span class="token string">"提交"</span> name<span class="token operator">=</span><span class="token string">"submitBtn"</span> <span class="token operator">/</span><span class="token operator">></span>    <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="http://img.mukewang.com/52e6126f0001496a04480218.jpg" alt="img"></p>
 <p>13.重置按钮</p>
@@ -949,7 +1081,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15k</span>
+                        class="white-color">14.2k</span>
             
             
             
