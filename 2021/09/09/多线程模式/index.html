@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Git的简单使用, 星心">
+    <meta name="keywords" content="多线程模式, 星心">
     <meta name="description" content="分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Git的简单使用 | 星心</title>
+    <title>多线程模式 | 星心</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -225,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Git的简单使用</h1>
+                    <h1 class="description center-align post-title">多线程模式</h1>
                 </div>
             </div>
         </div>
@@ -346,8 +346,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git/">
-                                <span class="chip bg-color">Git</span>
+                            <a href="/tags/JAVA%E5%90%8E%E7%AB%AF/">
+                                <span class="chip bg-color">JAVA后端</span>
                             </a>
                         
                     </div>
@@ -358,8 +358,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Git/" class="post-category">
-                                Git
+                            <a href="/categories/JAVA%E5%90%8E%E7%AB%AF/" class="post-category">
+                                JAVA后端
                             </a>
                         
                     </div>
@@ -371,7 +371,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-06
+                    2021-09-09
                 </div>
                 
 
@@ -380,14 +380,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.2k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    8 分
                 </div>
                 
 
@@ -410,194 +410,392 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h1><p><strong>什么是Git？</strong></p>
-<p>Git目前是世界上最先进的分布式版本控制系统。</p>
-<p><strong>那什么是版本控制系统？</strong></p>
-<p>如果你用word写过长篇大论，那你一定有过的这样的经历：</p>
-<p>想删除一个段落，又怕将来想恢复找不回来怎么办，有办法，先把文件另存为“…..”一个新的word文件，再接着改，改到一定程度，再另存为“…..”一个新文件，这样一直改下去，看着一堆乱七八糟的文件，想要保留最新的文件，却又不敢把其他的文件删掉，就怕哪天会用到，唉，真郁闷。更要命的是，有些部分需要你的同事帮助填写，于是你把文件copy给她，然后，你继续修改word文件，一天后，同事再把文件传给你，此时，你必须想想，发给她之后到你收到她的文件期间，你作了哪些改动，把你的改动和她的部分合并起来，真困难。</p>
-<p>于是你想，如果有一个软件，不但能自动帮我记录每次文件的改动，还可以让同事协作编辑，这样就不用自己管理一堆类似的文件了，也不需要把文件传来传去。如果想查看某次改动，只需要在软件里瞄一眼就可以，岂不是很方便？</p>
-<p><img src="https://z3.ax1x.com/2021/06/07/2BKgh9.png"></p>
-<p>这样，你就结束了手动管理多个“版本”的史前时代，进入到了版本控制的21世纪。</p>
-<blockquote>
-<p>关于git的诞生以及集中式VS分布式可以阅读：<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000">Git简介</a></p>
-</blockquote>
-<h1 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h1><ol>
-<li><p>在windows上安装Git，可以直接在git官网[下载安装程序](<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a>),然后默认按选项安装即可。</p>
-<p>安装完成后，点击鼠标右键若出现“<code>Git Bash Here</code>“，则安装成功了。</p>
+                <h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><p>进程：正在运行中的程序</p>
+<p>线程：单线程：进程中只有一条执行路径</p>
+<p>​         多线程：进程中有多条执行路径</p>
+<h2 id="多线程的实现方式"><a href="#多线程的实现方式" class="headerlink" title="多线程的实现方式"></a>多线程的实现方式</h2><h3 id="实现Thread类"><a href="#实现Thread类" class="headerlink" title="实现Thread类"></a>实现Thread类</h3><ol>
+<li><p>先创建Thread的子类，并且重写run方法</p>
 </li>
-<li><p>点击”<code>Git Bash Here</code>“在命令行输入</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git config --global user.name &quot;Your name&quot;      &#x2F;&#x2F;引号里输入你的用户名
+<li><p>在主程序中创线程类对象，并执行Start方法</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public class Mythread extends Thread&#123;
+    @Override
+    public void run() &#123;
+        for(int i&#x3D;0;i&lt;100;i++)&#123;
+            System.out.println(i);
+        &#125;
+    &#125;
+&#125;
 
-git config --global user.email &quot;Your email&quot;       &#x2F;&#x2F;输入你的邮箱<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>因为Git是分布式版本控制系统，所以每个机器必须自报家门：你的名字和email地址。</p>
-</li>
+public class MythreadDemo &#123;
+    public static void main(String[] args) &#123;
+        Mythread my1&#x3D;new Mythread();
+        Mythread my2&#x3D;new Mythread();
+        my1.start();
+        my2.start();
+    &#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
-<h1 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h1><ol>
-<li><p>什么是版本库呢？版本库又名仓库，英文名<strong>repository</strong>，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。</p>
+<h3 id="实现Runnable接口"><a href="#实现Runnable接口" class="headerlink" title="实现Runnable接口"></a>实现Runnable接口</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;*
+通过实现RUnnable接口实现多线程
+1. 创建myRunnable类实现RUnnable接口，重写run方法
+2.在测试类中创建myRUnnable对象
+3.创建Thread类，MyRunnable作为参数
+4.启动线程
+ *&#x2F;
+
+public class MyRunnable implements Runnable&#123;
+    @Override
+    public void run() &#123;
+        for(int i&#x3D;0;i&lt;99;i++)&#123;
+            System.out.println(Thread.currentThread().getName()+&quot;:&quot;+i);
+        &#125;
+    &#125;
+&#125;
+ public static void main(String[] args) &#123;
+        MyRunnable my&#x3D;new MyRunnable();
+        Thread th1&#x3D;new Thread(my,&quot;关羽&quot;);
+        Thread th2&#x3D;new Thread(my,&quot;张飞&quot;);
+
+        th1.start();
+        th2.start();
+    &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="设置获取线程名称"><a href="#设置获取线程名称" class="headerlink" title="设置获取线程名称"></a>设置获取线程名称</h2><ul>
+<li><ul>
+<li><table>
+<thead>
+<tr>
+<th><code>String</code></th>
+<th><code>getName()</code>  返回此线程的名称。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 </li>
-<li><p>创建：</p>
-<ul>
-<li><p>第一种方法：直接右键创建文件夹</p>
-</li>
-<li><p>第二种：使用命令</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">mkdir 文件夹名称
-cd 文件夹名称      &#x2F;&#x2F;此步是进入文件夹<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
-<li><p>通过 <code>git  init</code> 命令把这个目录变成Git可以管理的仓库</p>
-</li>
-<li><p>把文件添加到版本库</p>
-<p>首先这里再明确一下，所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。</p>
-<p>不幸的是，Microsoft的Word格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的，前面我们举的例子只是为了演示，如果要真正使用版本控制系统，就要以纯文本方式编写文件。</p>
-<p>第一步：用命令<code>git  add</code> 告诉Git，把文件添加到仓库</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git add hello.txt    &#x2F;&#x2F;文件的名称，要写全
-    
-&#x2F;&#x2F;或者
-git add .            &#x2F;&#x2F;这是添加目录内的所有文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>执行上面的命令，没有任何显示，这就对了，说明添加成功</p>
-<p>第二步：把文件提交到仓库</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git commit -m &quot;这是第一版&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ol>
-<h1 id="各种功能"><a href="#各种功能" class="headerlink" title="各种功能"></a>各种功能</h1><h2 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h2><p>在原来的文件做修改后，使用 <code>git status</code> 查看仓库当前状态，会告诉我们有文件做了修改，如果想要查看具体修改的内容，输入<code>git diff</code>  文件名</p>
-<p>做出修改后，再把它提交到仓库</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git add 文件名
-    
-&#x2F;&#x2F;或者
-git add .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git commit -m &quot;这是第二版&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><p>版本控制系统有个命令可以告诉我们历史记录：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>输出的内容中：<code>commit</code> 后面跟着的内容是版本号</p>
-<p>在git中，后面跟着HEAD的是当前版本，若要返回以前的版本，使用以下命令</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git reset --hard 版本号<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>当你换成以前的版本后，使用<code>git log</code> 命令后发现，我的最新版不见了，这时再想要回到最新版，肿么办？</p>
-<p>不要慌，因为我们的窗口还没有关掉，只要我们往上翻找，找到对应版本的版本号就好了！</p>
-<p>如果退出了窗口，可以使用 <code>git reflog</code> 命令查看你的历史记录，就可以查看版本号。</p>
-<h2 id="工作区和在暂存区："><a href="#工作区和在暂存区：" class="headerlink" title="工作区和在暂存区："></a>工作区和在暂存区：</h2><p><strong>工作区：</strong>就是你在电脑上看到的目录</p>
-<p><strong>版本库：</strong>工作区有个隐藏的目录.git,这个不算工作区，而是git的版本库，git的版本库中存了很多东西，其中最重要就是stage的暂存区，还有git为我们自动添加的分支：<code>master</code>,以及指向master的指针叫<code>HEAD</code>。</p>
-<p>前面说我们把文件往git版本库里添加的时候，分为2步执行：</p>
+</ul>
+<p>设置线程名称</p>
 <ol>
-<li><code>git add</code> :把文件添加到暂存区</li>
-<li><code>git commit -m &quot;....&quot;</code>:把暂存区的所有内容提交到当前分支（master)，这时暂存区就变空了。</li>
-</ol>
-<h2 id="撤销修改："><a href="#撤销修改：" class="headerlink" title="撤销修改："></a>撤销修改：</h2><ul>
-<li><p>场景1：当修改了工作区的内容，想直接回到修改前时,使用命令：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git checkout -- 文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>场景2：当你修改了内容，并且放到了暂存区，想丢弃修改，需要两步</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git reset HEAD 文件名 &#x2F;&#x2F;此步回到了场景1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li><ul>
+<li><table>
+<thead>
+<tr>
+<th><code>void</code></th>
+<th><code>setName(String name)</code>  将此线程的名称更改为等于参数 <code>name</code> 。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">my1.setName(&quot;飞机&quot;);
+my2.setName(&quot;火车&quot;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ul>
+</li>
+<li><p>构造方法</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public Mythread() &#123;
+    &#125;
 
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git checkout -- 文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>场景3:已经提交到了版本库:参考版本回退一节，不过前提是没有推送到远程仓库（远程仓库后面会说到）</p>
+    public Mythread(String name) &#123;
+        super(name);
+    &#125;
+
+Mythread my1&#x3D;new Mythread(&quot;火车&quot;);
+Mythread my2&#x3D;new Mythread(&quot;飞机&quot;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><ul>
+<li><table>
+<thead>
+<tr>
+<th><code>static Thread</code></th>
+<th><code>currentThread()</code>  返回对当前正在执行的线程对象的引用。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 </li>
 </ul>
-<h2 id="删除文件："><a href="#删除文件：" class="headerlink" title="删除文件："></a>删除文件：</h2><p>删除文件的2中方法：</p>
-<ol>
-<li>直接鼠标右键删除</li>
-<li>使用命令：<code>rm </code>文件名</li>
-</ol>
-<p>如果你已经将文件添加到版本库，现在你有两个选择：</p>
-<ol>
-<li><p>你是真的想删：那么就用<code>git commit -m &quot;...&quot;</code>  提交到版本库</p>
-</li>
-<li><p>你是不小心删掉的，想要恢复：</p>
-<p>因为版本库中还有呢，所以使用命令：<code>git checkout -- 文件名 </code> 就可恢复，但你只能恢复到版本库中的内容。</p>
 </li>
 </ol>
-<h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><ol>
-<li><p>这个世界上有个叫Github的神奇网站，从名字可以看出，这个网站就是提供Git仓库管理服务的，所以，只要注册一个Github账号，就可以免费会获得远程仓库。</p>
+<h2 id="线程调度"><a href="#线程调度" class="headerlink" title="线程调度"></a>线程调度</h2><ol>
+<li><p>分时调度模型：每个线程轮流使用CPU，平均分配每个线程CPU的时间片</p>
 </li>
-<li><p>Github仓库和本地仓库之间的传输是通过SSH加密的，所以需要一点设置：</p>
+<li><p>抢占式调度模型：优先级高的线程优先使用CPU，如果优先级相同，则随机分配，优先级高的时间片长一些</p>
+<p><strong>java使用的是抢占式调度模型</strong></p>
+</li>
+</ol>
+<p>设置获取线程优先级</p>
 <ul>
-<li><p>第一步：创建SSH Key。打开Git Bash Here</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">ssh-keygen -t rsa -C &quot;你的邮件&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>然后一路回车，如果成功的话，会在用户的主目录中找到<code>.ssh</code>目录（一般在C盘的用户目录中），里面有<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件的，<code>id_rsa</code>是私钥，<strong>不能随便泄露</strong>，<code>id_rsa_pub</code>是公钥，可以放心告诉任何人。</p>
-</li>
-<li><p>第二步：登录Github，点击<code>settings</code>，打开<code>”SSH Key&quot;</code>页面，然后点“<code>Add SSH Key</code>“ ，填上任意title，再Key文本框粘贴上id_rsa.pub文件的内容，点”<code>Add key</code>“即可。</p>
+<li><ul>
+<li><table>
+<thead>
+<tr>
+<th><code>int</code></th>
+<th><code>getPriority()</code>  返回此线程的优先级。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 </li>
+<li><ul>
+<li><table>
+<thead>
+<tr>
+<th><code>void</code></th>
+<th><code>setPriority(int newPriority)</code>  更改此线程的优先级。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ul>
+<p>线程的优先级默认为5，范围是1-10</p>
+<p>线程优先级高仅仅表示获取CPU时间片的几率高，并不能总是率先执行</p>
+<h2 id="线程控制"><a href="#线程控制" class="headerlink" title="线程控制"></a>线程控制</h2><ul>
+<li><ul>
+<li><table>
+<thead>
+<tr>
+<th><code>static void</code></th>
+<th><code>sleep(long millis)</code>  使当前正在执行的线程以指定的毫秒数暂停（暂时停止执行），具体取决于系统定时器和调度程序的精度和准确性。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">  try &#123;
+                Thread.sleep(1000);
+            &#125; catch (InterruptedException e) &#123;
+                e.printStackTrace();
+            &#125;
+&#x2F;&#x2F;让线程每次执行一次停顿一秒<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+</li>
+<li><ul>
+<li><table>
+<thead>
+<tr>
+<th><code>void</code></th>
+<th><code>join()</code>  等待这个线程死亡。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>该线程执行完以后其他线程才开始执行</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><table>
+<thead>
+<tr>
+<th><code>void</code></th>
+<th><code>setDaemon(boolean on)</code>  将此线程标记为 <a href="../../java/lang/Thread.html#isDaemon--">daemon</a>线程或用户线程。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>先执行主线程，当线程都为守护线程时，JVM虚拟机退出</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据安全问题"><a href="#数据安全问题" class="headerlink" title="数据安全问题"></a>数据安全问题</h2><p>产生原因：</p>
+<ol>
+<li>多线程</li>
+<li>共享数据</li>
+<li>都会操作数据，使数据发生变化</li>
 </ol>
-<h2 id="在github上创建仓库："><a href="#在github上创建仓库：" class="headerlink" title="在github上创建仓库："></a>在github上创建仓库：</h2><ul>
-<li><p>右上角”<code>create a new repository</code>“,创建一个新的仓库，仓库名要和你本地的仓库名字一样，比如你创建的文件夹的名字为“test”，你的Github仓库名字必须也是这个。创建成功后，会出现一个地址，复制下来。</p>
+<p>解决方法:</p>
+<ol>
+<li>使用同步代码块给代码上锁，使得其中一个线程执行该代码时其他线程不能执行该代码。</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">synchronized (obj)&#123;
+        if(num&gt;0)&#123;
+            try &#123;
+                Thread.sleep(100);
+            &#125; catch (InterruptedException e) &#123;
+                e.printStackTrace();
+            &#125;
+            System.out.println(Thread.currentThread().getName()+&quot;卖出第&quot;+num+&quot;张票&quot;);
+            num--;
+
+        &#125;
+    &#125;&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li><p>同步方法</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">public void run() &#123;
+       while(true)&#123;
+           if(x%2&#x3D;&#x3D;0) &#123;
+               synchronized (SellTicket.class)&#123;
+                   if (num &gt; 0) &#123;
+                       try &#123;
+                           Thread.sleep(100);
+                       &#125; catch (InterruptedException e) &#123;
+                           e.printStackTrace();
+                       &#125;
+                       System.out.println(Thread.currentThread().getName() + &quot;卖出第&quot; + num + &quot;张票&quot;);
+                       num--;
+                   &#125;
+               &#125;
+   &#125;
+       else&#123;
+           sellTicket();
+           &#125;
+       &#125;&#125;
+   
+   private synchronized void sellTicket() &#123;
+   
+           if (num &gt; 0) &#123;
+               try &#123;
+                   Thread.sleep(100);
+               &#125; catch (InterruptedException e) &#123;
+                   e.printStackTrace();
+               &#125;
+               System.out.println(Thread.currentThread().getName() + &quot;卖出第&quot; + num + &quot;张票&quot;);
+               num--;
+           &#125;
+       &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>同步静态方法的锁对象是：类名.class</strong></p>
 </li>
-<li><p>在本地仓库（文件夹）内打开<code>Git Bash Here</code>，运行命令</p>
-<pre class="line-numbers language-java'" data-language="java'"><code class="language-java'">git remote add origin 刚刚你复制的地址<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>将本地仓库推送到远端：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git push -u origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li><p>lock锁的使用</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">Lock lock&#x3D;new ReentrantLock();
+public void run() &#123;
+        while (true) &#123;
+            try &#123;
+                lock.lock();&#x2F;&#x2F;加锁
+                if(num&gt;0)&#123;
+                    try &#123;
+                        Thread.sleep(100);
+                    &#125; catch (InterruptedException e) &#123;
+                        e.printStackTrace();
+                    &#125;
+                    System.out.println(Thread.currentThread().getName()+&quot;卖出第&quot;+num+&quot;张票&quot;);
+                    num--;
+                &#125;
+            &#125;
+            finally &#123;
+                lock.unlock();&#x2F;&#x2F;释放锁
+            &#125;
 
-<p>把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。</p>
-<p>由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
-<p>这是你会发现的Github的仓库和本地的仓库一模一样了。</p>
-<p>从现在起，只要本地作提交，只需要以下命令：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git push origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<h2 id="删除远程库："><a href="#删除远程库：" class="headerlink" title="删除远程库："></a>删除远程库：</h2><p>如果添加的时候地址写错了，或者就是想删除远程库，使用以下命令：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git remote rm origin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+        &#125;
+        &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<h3 id="消费者模式"><a href="#消费者模式" class="headerlink" title="消费者模式"></a>消费者模式</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;奶箱类
+public class Box &#123;
+    private int milk;
+    private boolean state&#x3D;false;
+    public synchronized void put(int milk)&#123;
+        if(state)&#123;
+            try &#123;
+                wait();&#x2F;&#x2F;如果奶箱中没有牛奶，就等待
+            &#125; catch (InterruptedException e) &#123;
+                e.printStackTrace();
+            &#125;
+        &#125;
+        this.milk&#x3D;milk;
+        System.out.println(&quot;牛奶工放入第&quot;+milk+&quot;瓶牛奶&quot;);
+        state&#x3D;true;
+        notifyAll();
+    &#125;
+    public synchronized void get()&#123;
+        if(!state)&#123;
+            try &#123;
+                wait();
+            &#125; catch (InterruptedException e) &#123;
+                e.printStackTrace();
+            &#125;
+        &#125;
+        System.out.println(&quot;消费者取出第&quot;+milk+&quot;瓶牛奶&quot;);
+        state&#x3D;false;
+        notifyAll();
+    &#125;
+&#125;
+&#x2F;&#x2F;生产者类
+public class Producer implements Runnable&#123;
+    Box b;
+    public Producer(Box b)&#123;
+        this.b&#x3D;b;
+    &#125;
 
-<p>使用前，建议先用<code>git remote -v</code>查看远程库信息：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">$ git remote -v
-origin  git@github.com:michaelliao&#x2F;learn-git.git (fetch)
-origin  git@github.com:michaelliao&#x2F;learn-git.git (push)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+    @Override
+    public void run() &#123;
+        for(int i&#x3D;1;i&lt;&#x3D;5;i++)&#123;
+             b.put(i);
+        &#125;
+    &#125;
+&#125;
 
-<p>然后，根据名字删除，比如删除<code>origin</code>：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">$ git remote rm origin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+&#x2F;&#x2F;消费者类
+public class Customer implements Runnable &#123;
+    Box b;
+    public Customer(Box b) &#123;
+        this.b&#x3D;b;
+    &#125;
 
-<p>此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。</p>
-<h2 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h2><p>上次我们讲了先有本地库，后有远程库的时候，如何关联远程库。</p>
-<p>现在，假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆。</p>
-<ul>
-<li><p>登录Github，创建仓库。</p>
-</li>
-<li><p>去本地</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git clone 仓库地址<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><p>​    在<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即<code>master</code>分支。<code>HEAD</code>严格来说不是指向提交，而是指向<code>master</code>，<code>master</code>才是指向提交的，所以，<code>HEAD</code>指向的就是当前分支。</p>
-<p>每次提交，<code>master</code>分支都会向前移动一步，这样，随着你不断提交，<code>master</code>分支的线也越来越长。当我们创建新的分支，例如<code>dev</code>时，Git新建了一个指针叫<code>dev</code>，指向<code>master</code>相同的提交，再把<code>HEAD</code>指向<code>dev</code>，就表示当前分支在<code>dev</code>上。</p>
-<p>​     你看，Git创建一个分支很快，因为除了增加一个<code>dev</code>指针，改改<code>HEAD</code>的指向，工作区的文件都没有任何变化！不过，从现在开始，对工作区的修改和提交就是针对<code>dev</code>分支了，比如新提交一次后，<code>dev</code>指针往前移动一步，而<code>master</code>指针不变。</p>
-<p>​     假如我们在<code>dev</code>上的工作完成了，就可以把<code>dev</code>合并到<code>master</code>上。Git怎么合并呢？最简单的方法，就是直接把<code>master</code>指向<code>dev</code>的当前提交，就完成了合并。</p>
-<h2 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">git checkout -b dev     &#x2F;&#x2F;创建并切换
-    
- &#x2F;&#x2F;或者
-git switch -c dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+    @Override
+    public void run() &#123;
+        while(true)&#123;
+            b.get();
+        &#125;
 
-<p>查看分支</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git branch               &#x2F;&#x2F;会列出所有分支，在当前分支前面加一个*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    &#125;
+&#125;
 
-<p>然后，我们就可以在dev分支上正常提交</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git add 文件名
-    
-git commit -m &quot;......&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+&#x2F;&#x2F;测试类
+public class Boxdemo &#123;
+    &#x2F;*
+   生产者模式牛奶例子：
+   1. 创建牛奶盒子，用来存放牛奶，两个方法分别代表放牛奶和取牛奶
+   2.创建生产者类
+   3。创建消费者类
+   4.测试主类：创建牛奶盒子对象，创建生产者对象，消费者对象，执行线程
+     *&#x2F;
+    public static void main(String[] args) &#123;
+        Box b&#x3D;new Box();
+        Producer p&#x3D;new Producer(b);
+        Customer c&#x3D;new Customer(b);
 
-<p>现在，<code>dev</code>分支上的工作完成，我们就可以切换到master分支</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git checkout master
-    
-&#x2F;&#x2F;或者
-git switch master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+        Thread th1&#x3D;new Thread(p);
+        Thread th2&#x3D;new Thread(c);
 
-<p>切换到<code>master</code>分支后,我们打开文件发现刚才修改的内容不见了，这是因为那个提交是在dev分枝上，而master分支此刻的提交点没有变。</p>
-<p>我们把<code>dev</code>分支合并到master分支上</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git merge dev           &#x2F;&#x2F;表示将目标分支合并到当前分支<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+        th1.start();
+        th2.start();
 
-<p>合并完成后，就可以删除dev分支了</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git branch -d dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    &#125;
+&#125;&#x2F;&#x2F;奶箱类public class Box &#123;    private int milk;    private boolean state&#x3D;false;    public synchronized void put(int milk)&#123;        if(state)&#123;            try &#123;                wait();&#x2F;&#x2F;如果奶箱中没有牛奶，就等待            &#125; catch (InterruptedException e) &#123;                e.printStackTrace();            &#125;        &#125;        this.milk&#x3D;milk;        System.out.println(&quot;牛奶工放入第&quot;+milk+&quot;瓶牛奶&quot;);        state&#x3D;true;        notifyAll();    &#125;    public synchronized void get()&#123;        if(!state)&#123;            try &#123;                wait();            &#125; catch (InterruptedException e) &#123;                e.printStackTrace();            &#125;        &#125;        System.out.println(&quot;消费者取出第&quot;+milk+&quot;瓶牛奶&quot;);        state&#x3D;false;        notifyAll();    &#125;&#125;&#x2F;&#x2F;生产者类public class Producer implements Runnable&#123;    Box b;    public Producer(Box b)&#123;        this.b&#x3D;b;    &#125;    @Override    public void run() &#123;        for(int i&#x3D;1;i&lt;&#x3D;5;i++)&#123;             b.put(i);        &#125;    &#125;&#125;&#x2F;&#x2F;消费者类public class Customer implements Runnable &#123;    Box b;    public Customer(Box b) &#123;        this.b&#x3D;b;    &#125;    @Override    public void run() &#123;        while(true)&#123;            b.get();        &#125;    &#125;&#125;&#x2F;&#x2F;测试类public class Boxdemo &#123;    &#x2F;*   生产者模式牛奶例子：   1. 创建牛奶盒子，用来存放牛奶，两个方法分别代表放牛奶和取牛奶   2.创建生产者类   3。创建消费者类   4.测试主类：创建牛奶盒子对象，创建生产者对象，消费者对象，执行线程     *&#x2F;    public static void main(String[] args) &#123;        Box b&#x3D;new Box();        Producer p&#x3D;new Producer(b);        Customer c&#x3D;new Customer(b);        Thread th1&#x3D;new Thread(p);        Thread th2&#x3D;new Thread(c);        th1.start();        th2.start();    &#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>再查看分支：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">git branch<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>会发现<code>dev</code>分支不见了</p>
-<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>当我们在<code>dev</code>分支修改内容后，切换到master分支，又在同样地方不小心修改了一些内容，两者发生了冲突，合并时就会报错。</p>
-<p>这时就需要我们手动改回来，再进行合并。</p>
-<p>（可以用<code>git log --graph</code>产看分支合并图）。</p>
-<blockquote>
-<p>此文章是关于Git的一些简单使用，想要查看更多使用方法，参考里廖雪峰老师的<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">Git教程</a>.</p>
-</blockquote>
+
+
+
 
                 
             </div>
@@ -624,7 +822,7 @@ git switch master<span aria-hidden="true" class="line-numbers-rows"><span></span
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/06/06/git%E7%9A%84%E4%BD%BF%E7%94%A8/">http://example.com/2021/06/06/git%E7%9A%84%E4%BD%BF%E7%94%A8/</a>
+                    <a href="http://example.com/2021/09/09/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%BC%8F/">http://example.com/2021/09/09/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%BC%8F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -662,8 +860,8 @@ git switch master<span aria-hidden="true" class="line-numbers-rows"><span></span
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Git/">
-                                    <span class="chip bg-color">Git</span>
+                                <a href="/tags/JAVA%E5%90%8E%E7%AB%AF/">
+                                    <span class="chip bg-color">JAVA后端</span>
                                 </a>
                             
                         </div>
@@ -709,9 +907,10 @@ git switch master<span aria-hidden="true" class="line-numbers-rows"><span></span
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/09/09/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%BC%8F/">
                     <div class="card-image">
@@ -729,9 +928,9 @@ git switch master<span aria-hidden="true" class="line-numbers-rows"><span></span
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -744,6 +943,7 @@ git switch master<span aria-hidden="true" class="line-numbers-rows"><span></span
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -762,13 +962,13 @@ git switch master<span aria-hidden="true" class="line-numbers-rows"><span></span
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/02/HTML%E5%9F%BA%E7%A1%80/">
+                <a href="/2021/06/06/git%E7%9A%84%E4%BD%BF%E7%94%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="HTML基础">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Git的简单使用">
                         
-                        <span class="card-title">HTML基础</span>
+                        <span class="card-title">Git的简单使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -779,14 +979,14 @@ git switch master<span aria-hidden="true" class="line-numbers-rows"><span></span
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%89%91%E5%AE%A2/" class="post-category">
-                                    前端三剑客
+                            <a href="/categories/Git/" class="post-category">
+                                    Git
                                 </a>
                             
                             
@@ -796,8 +996,8 @@ git switch master<span aria-hidden="true" class="line-numbers-rows"><span></span
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/web/">
-                        <span class="chip bg-color">web</span>
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>
